@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/main">
+
+    <fragment
+        android:id="@+id/main"
+        android:name="com.davidsadler.navigationplay.MainFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_main_to_objectDetail"
+            app:destination="@id/objectDetail" />
+        <action
+            android:id="@+id/action_main_to_secondNavigationFragment"
+            app:destination="@id/secondNavigationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/objectDetail"
+        android:name="com.davidsadler.navigationplay.DetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_object_detail" />
+    <fragment
+        android:id="@+id/secondNavigationFragment"
+        android:name="com.davidsadler.navigationplay.SecondFragment"
+        android:label="Second"
+        tools:layout="@layout/fragment_second_navigation" />
+</navigation>
